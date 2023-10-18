@@ -1,6 +1,6 @@
 package services;
 
-import DTO.CreateUserDTO;
+import request.CreateUserRequest;
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -20,7 +20,7 @@ public class CreateUserAPI {
                 .log().all();
     }
 
-    public ValidatableResponse createUser(CreateUserDTO user) {
+    public ValidatableResponse createUser(CreateUserRequest user) {
         return given(requestSpecification)
                 .body(user)
                 .when()

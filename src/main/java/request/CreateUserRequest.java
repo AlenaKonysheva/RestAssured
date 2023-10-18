@@ -1,14 +1,16 @@
-package DTO;
+package request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Data
 @Builder
 @AllArgsConstructor
-public class CreateUserDTO {
+@NoArgsConstructor
+public class CreateUserRequest {
     private String email;
     private String firstName;
     private Long id;
