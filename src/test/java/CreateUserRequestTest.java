@@ -40,12 +40,15 @@ public class CreateUserRequestTest {
 
         int actualCode = createUserAPI.createUser(newUserAllFields).extract().body().jsonPath().get("code");
         int expectedCode = 200;
+        Assertions.assertEquals(expectedCode, actualCode);
 
         String actualMessage = createUserAPI.createUser(newUserAllFields).extract().body().jsonPath().get("message");
         String expectedMessage = "100";
+        Assertions.assertEquals(expectedMessage, actualMessage);
 
         String actualType = createUserAPI.createUser(newUserAllFields).extract().body().jsonPath().get("type");
         String expectedType = "unknown";
+        Assertions.assertEquals(expectedType, actualType);
 
     }
 
